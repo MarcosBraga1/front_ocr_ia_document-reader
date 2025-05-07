@@ -2,7 +2,8 @@
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-![image](https://github.com/user-attachments/assets/d9463e5e-8523-424a-8dc5-9e3782254cb9)
+![Captura de tela 2025-05-07 011145](https://github.com/user-attachments/assets/31099630-1618-4aa4-9409-1cd3d1422afb)
+![Captura de tela 2025-05-07 011336](https://github.com/user-attachments/assets/63081b04-569f-43f7-abed-1c51b8f45086)
 
 
 ## Sobre a Aplicação
