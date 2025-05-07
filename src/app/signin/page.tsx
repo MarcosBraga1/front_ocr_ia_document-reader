@@ -42,7 +42,8 @@ export default function Singin() {
 
             if (data.success) {
                 console.log('user authenticated');
-                router.push('/dashboard');
+                router.replace('/dashboard');
+                router.refresh();
             }
         } catch (error) {
             console.log(error);
