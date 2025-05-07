@@ -24,7 +24,7 @@ export default function Singup() {
 
         try {
             const response = await fetch(
-                'https://ocr-ia-document-reader.onrender.com/auth/signin',
+                '/api/auth/signin',
                 {
                     method: 'POST',
                     headers: {
