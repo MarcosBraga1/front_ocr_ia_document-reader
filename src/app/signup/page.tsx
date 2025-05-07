@@ -24,7 +24,7 @@ export default function Singup() {
 
         try {
             const response = await fetch(
-                '/api/auth/signin',
+                '/api/auth/signup',
                 {
                     method: 'POST',
                     headers: {
