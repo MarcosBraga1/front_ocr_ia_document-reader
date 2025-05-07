@@ -38,7 +38,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
         const fetchMessages = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:8000/conversation/messages?conversationId=${id}`,
+                    `https://ocr-ia-document-reader.onrender.com/conversation/messages?conversationId=${id}`,
                     {
                         method: 'GET',
                         credentials: 'include',
@@ -71,7 +71,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
         formData.append('file', file);
 
         try {
-            const response = await fetch(`http://localhost:8000/ocr/upload?conversationId=${id}`, {
+            const response = await fetch(`https://ocr-ia-document-reader.onrender.com/ocr/upload?conversationId=${id}`, {
                 method: 'POST',
                 body: formData,
                 credentials: 'include',
@@ -87,7 +87,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
 
             try {
                 const res = await fetch(
-                    `http://localhost:8000/conversation/message?conversationId=${id}`,
+                    `https://ocr-ia-document-reader.onrender.com/conversation/message?conversationId=${id}`,
                     {
                         method: 'POST',
                         credentials: 'include',
@@ -140,7 +140,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
 
     const downloadConversation = async (conversationId: number) => {
         try {
-            const response = await fetch(`http://localhost:8000/conversation/${conversationId}/export`, {
+            const response = await fetch(`https://ocr-ia-document-reader.onrender.com/conversation/${conversationId}/export`, {
                 method: 'GET',
                 credentials: 'include',
             });
@@ -167,7 +167,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
 
         try {
             const res = await fetch(
-                `http://localhost:8000/conversation/message?conversationId=${id}`,
+                `https://ocr-ia-document-reader.onrender.com/conversation/message?conversationId=${id}`,
                 {
                     method: 'POST',
                     credentials: 'include',
@@ -202,7 +202,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/llm/prompt',
+                'https://ocr-ia-document-reader.onrender.com/llm/prompt',
                 {
                     method: 'POST',
                     credentials: 'include',
@@ -224,7 +224,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
 
             try {
                 const res = await fetch(
-                    `http://localhost:8000/conversation/message?conversationId=${id}`,
+                    `https://ocr-ia-document-reader.onrender.com/conversation/message?conversationId=${id}`,
                     {
                         method: 'POST',
                         credentials: 'include',
@@ -312,7 +312,7 @@ export function DashboardClient({ id }: DashboardClientProps) {
                                         >
                                             {mes.document?.fileUrl && (
                                                 <img
-                                                    src={`http://localhost:8000/${mes.document.fileUrl.replace(/\\/g, '/')}`}
+                                                    src={`https://ocr-ia-document-reader.onrender.com/${mes.document.fileUrl.replace(/\\/g, '/')}`}
                                                     alt="Documento enviado"
                                                     className="mb-2 rounded max-h-60 object-contain"
                                                 />

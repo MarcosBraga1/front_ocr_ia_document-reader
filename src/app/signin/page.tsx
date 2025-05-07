@@ -22,7 +22,7 @@ export default function Singin() {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/auth/signin',
+                'https://ocr-ia-document-reader.onrender.com/auth/signin',
                 {
                     method: 'POST',
                     headers: {

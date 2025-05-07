@@ -19,7 +19,7 @@ export function Sidebar() {
         const fetchConversations = async () => {
             try {
                 const response = await fetch(
-                    'http://localhost:8000/conversation/',
+                    'https://ocr-ia-document-reader.onrender.com/conversation/',
                     {
                         method: 'GET',
                         credentials: 'include'
@@ -46,7 +46,7 @@ export function Sidebar() {
 
         try {
             const response = await fetch(
-                'http://localhost:8000/conversation',
+                'https://ocr-ia-document-reader.onrender.com/conversation',
                 {
                     method: 'POST',
                     credentials: 'include',
