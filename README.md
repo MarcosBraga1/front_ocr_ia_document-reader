@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Leitor Inteligente de Documentos com OCR + IA
 
-## Getting Started
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/d9463e5e-8523-424a-8dc5-9e3782254cb9)
+
+
+## Sobre a Aplicação
+Este projeto é uma aplicação web que permite o envio de imagens e documentos (como `.png`, `.jpg`), realiza a extração de texto via OCR utilizando o Tesseract.js e, em seguida, envia o conteúdo para uma IA generativa (Gemini) que fornece interpretação interativa e respostas contextuais com base no conteúdo extraído.
+
+A aplicação foi desenvolvida como solução para um desafio técnico proposto em um processo seletivo, com o objetivo de demonstrar domínio técnico em desenvolvimento.
+
+### Tecnologias Usadas
+- **Frontend:** Next.js + Tailwind CSS
+
+## Instruções de Instalação
+### Pré-requisitos
+**1.** Node (versão 18 ou superior)
+**2.** npm ou yarn
+
+### Instalação
+#### Front-end
 
 ```bash
+# Acesse a pasta do frontend
+cd frontend
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instruções de Uso
+Após seguir os passos de instalação, siga estas instruções para usar a aplicação:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 1. Realize o cadastro
+Acesse `http://localhost:3000/signup` e crie sua conta de usuário, você será automaticamente redirecionado para o sistema.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 2. Crie uma nova conversa
+No painel lateral, clique em "Nova conversa" para iniciar uma sessão.
 
-## Learn More
+#### 3. Envie um documento
+Dentro da conversa:
+- Clique em "Enviar imagem ou documento"
+- Selecione um arquivo `.png`, `.jpg`.
+- O sistema irá extrair o texto via OCR e exibir como uma mensagem.
 
-To learn more about Next.js, take a look at the following resources:
+#### 4. Faça perguntas sobre o conteúdo
+Digite perguntas no campo de mensagem. A resposta será gerada automaticamente por IA (Google Gemini).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### 5. Baixe a conversa em PDF
+Clique no ícone de download no topo da conversa para gerar um PDF com os textos e imagens trocados.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Licença
+Este projeto está licenciado sob os termos da [MIT License](LICENSE).
